@@ -1,0 +1,25 @@
+<head>
+</head>
+<body>
+<div class="top">
+  <h1> Happiness Dashboard</h1>
+  <h2> Create your poll! </h2>
+</div>
+
+<form>
+  <div class="form">
+    <table>
+      <tr><td>Introduce your question:</td><input type="text" id="poll" name="question" required placeholder="question"></tr>
+      <tr><td>Introduce the topic of your poll:</td><input type="text" id="topic" name="topic" required placeholder="topic"></tr>
+      <tr><td>Write the keywords of your poll:</td><input type="text" id="keywords" name="keywords" placeholder="keywords (optional)"></tr>
+      <tr><td>Choose an expiration date:<td><input type="date" id="exp_date" name="exp_date"></tr>
+
+    </table>
+  </div>
+  <div class="container">
+    <button (click)="confirm()" id="btn">
+      <p id="btnText">Submit</p>
+    </button>
+  </div>
+</form>
+</body>

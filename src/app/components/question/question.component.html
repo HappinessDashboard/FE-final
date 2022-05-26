@@ -1,0 +1,113 @@
+<script>
+  function myFunction() {
+      document.getElementById("text_id").innerHTML = "display: block";
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<div class="center">
+  <div class="container">
+    <div class="text">
+      How are you feeling today?
+    </div>
+    <form action="#">
+      <div class="line">
+      <input type="range" min="1" max="10" value="5">
+      </div>
+      <div class="data">
+        <input type="radio" id="r1" name="choice" value="30">
+        <label for="r1">1</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r2" name="choice" value="30">
+        <label for="r2">2</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r3" name="choice" value="30">
+        <label for="r3">3</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r4" name="choice" value="30">
+        <label for="r4">4</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r5" name="choice" value="30">
+        <label for="r5">5</label>
+      </div><div class="data">
+        <input type="radio" id="r6" name="choice" value="30">
+        <label for="r6">6</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r7" name="choice" value="30">
+        <label for="r7">7</label>
+    </div>
+      <div class="data">
+        <input type="radio" id="r8" name="choice" value="30">
+        <label for="r8">8</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r9" name="choice" value="30">
+        <label for="r9">9</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r10" name="choice" value="30">
+        <label for="r10">10</label>
+      </div>
+      <div class="btn">
+        <div class="inner"></div>
+        <button type="submit">Respond</button>
+      </div>
+      <div class="signup-link">
+<textarea cols = "30" rows = "20" name="text" id="text_id" style="resize:vertical; display:none"></textarea>
+<button (click)="commentbox()">Leave a comment!</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--
+   <script>
+	 var emojis = {
+	 "🤬": { max: 2 },
+	 "😭": { max: 3 },
+	 "😢": { max: 4 },
+	 "☹️": { max: 5 },
+	 "🙁": { max: 6 },
+	 "😐": { max: 7 },
+	 "🙂": { max: 8 },
+	 "😊": { max: 9 },
+	 "😄": { max: 10 },
+	 "😁": { min: 10}
+   },
+   _emojis = document.getElementById("mood"),
+   _FORM = _emojis.parentNode,
+   _MOUT = _emojis.nextElementSibling;
+ 
+ let val = null;
+ 
+ function updateVal() {
+   let newval = +_emojis.value;
+ 
+   if (val !== newval) {
+	 _FORM.style.setProperty("--val", (val = newval));
+ 
+	 for (let k in emojis)
+	   if (
+		 (!emojis[k].min || emojis[k].min <= val) &&
+		 (!emojis[k].max || emojis[k].max > val)
+	   ) {
+		 _MOUT.textContent = k;
+		 break;
+	   }
+   }
+ }
+ 
+ updateVal();
+ 
+ addEventListener("change", updateVal, false);
+ addEventListener("input", updateVal, false);
+   
+	 </script>
+
+
+-->
