@@ -7,13 +7,33 @@
 }
 
 input[type="range"]{
-  width:100%;
+  width:98%;
+  margin-left: 6px;
+}
+
+.image {
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  height: 50vh;
+  top: 85%;
+  left: 70%;
+  transform: translate(-25%, -75%);
+}
+
+.image2 {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  height: 40vh;
+  top: 25%;
+  left: 10%;
+  transform: translate(-25%, -25%);
 }
 
 body{
   height: 100vh;
   width: 100%;
-  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
 .show-btn{
   background: #fff;
@@ -41,7 +61,6 @@ button{
   font-size: 12px;
   border-radius: 40px;
   text-align: center;
-  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
 }
 
 
@@ -69,7 +88,7 @@ button{
 .container form .data{
   display: inline-block;
   text-align: center;
-  width: 10%; 
+  width: 10%;
 }
 form .data label{
   font-size: 15px;
@@ -135,4 +154,21 @@ form .signup-link a{
 }
 form .signup-link a:hover{
   text-decoration: underline;
+}
+
+hr {
+  margin-top: 5%;
+  color: #94d8ec;
+}
+
+form .com{
+  background-color: slateblue;
+  height: 100px;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+form .comentarii {
+  margin: auto;
+  background-color: #94d8ec;
 }

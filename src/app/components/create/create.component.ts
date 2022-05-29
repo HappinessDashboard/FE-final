@@ -1,5 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 //import { PollService } from './poll.service';
+
+export class Poll {
+  constructor(
+    public id: number,
+    public question: string,
+    public topic: string,
+    public active: boolean,
+    public creation_date: Date,
+    public expirationDate: Date,
+    public keywords: string
+  ) {
+  }
+}
 
 @Component({
   selector: 'app-create',
@@ -11,9 +26,20 @@ export class CreateComponent implements OnInit {
   confirm(){
     alert(this.message);
   }
-  constructor(){}//private pollService: PollService) {}
+
+  constructor(
+    private httpClient: HttpClient
+    
+  ){}
 
   ngOnInit(): void {
+    
   }
-
+  onSubmit(data: any){
+    this.httpClient.post("http://localhost:8080/newPoll",data)
+    .subscribe((result)=>{
+      console.warn("result",result)
+    })
+    console.warn(data);
+  }
 }

@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnswerComponent } from './components/answer/answer.component';
 import { CreateComponent } from './components/create/create.component';
 import { QuestionComponent } from './components/question/question.component';
+import { FormsModule } from '@angular/forms';
+import { ChartsComponent } from './components/charts/charts.component';
 //import { PollService } from './poll.service';
 
 
@@ -26,11 +28,13 @@ const routes: Routes = [
     AnswerComponent,
     CreateComponent,
     QuestionComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],//[PollService],
   exports: [RouterModule],
